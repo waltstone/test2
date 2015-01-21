@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+
+<cross-domain-policy>
+	<site-control permitted-cross-domain-policies="all"/>
+	<allow-access-from domain="local.git" secure="false"/>
+	<allow-access-from domain="local.evil" secure="false"/>
+	<allow-access-from domain="rubaxa.org" secure="false"/>
+	<allow-access-from domain="*.rubaxa.org" secure="false"/>
+	<allow-access-from domain="github.com" secure="false"/>
+	<allow-access-from domain="*.github.com" secure="false"/>
+	<allow-access-from domain="github.io" secure="false"/>
+	<allow-access-from domain="*.github.io" secure="false"/>
+	<allow-access-from domain="mail.ru" secure="false"/>
+	<allow-access-from domain="*.mail.ru" secure="false"/>
+	<allow-access-from domain="imgsmail.ru" secure="false"/>
+	<allow-access-from domain="*.imgsmail.ru" secure="false"/>
+	<allow-access-from domain="img.imgsmail.ru" secure="false"/>
+	<allow-access-from domain="*.img.imgsmail.ru" secure="false"/>
+	<allow-http-request-headers-from domain="*" headers="*" secure="false"/>
+</cross-domain-policy>
+
+<script>
+        window.FileAPI = {
+              debug: false   // debug mode, see Console
+            , cors: false    // if used CORS, set `true`
+            , media: false   // if used WebCam, set `true`
+            , staticPath: '/js/FileAPI/dist/' // path to '*.swf'
+            , postNameConcat: function (name, idx){
+                // Default: object[foo]=1&object[bar][baz]=2
+                // .NET: https://github.com/mailru/FileAPI/issues/121#issuecomment-24590395
+                return  name + (idx != null ? '['+ idx +']' : '');
+            }
+        };
+    </script>
+    <script src="/js/FileAPI-master/dist/FileAPI.min.js"></script>
