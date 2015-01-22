@@ -12,7 +12,7 @@
 		// Create preview
 		FileAPI.Image(file)
 			
-			.resize(600, 600, 'max')
+			.resize(50, 50, 'max')
 			//.overlay(overlay)
 			//.preview(600, 600)
 			.get(function (err, img){
